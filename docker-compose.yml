@@ -1,0 +1,17 @@
+version: "3.2"
+services:
+  c9:
+    image : mosac/c9ndev:latest
+    ports:
+      - "8080:8080"
+    entrypoint:
+      - "/root/.ndenv/versions/v6.14.3/bin/node"
+      - "/c9sdk/server.js"
+      - "-p"
+      - "8080"
+      - "--listen"
+      - "0.0.0.0"
+      - "-a"
+      - "user:password"
+      - "-w"
+      - "/app"
